@@ -18,24 +18,34 @@ A minimal, production-ready Telegram bot that connects to LLM models (GPT / Clau
 
 🚀 Easy deployment
 
-🏗 Architecture
-🔄 System Flow
-Telegram User
-      │
-      ▼
-Telegram Bot API
-      │
-      ▼
-telegram_nanobot.py (Bot Core)
-      │
-      ▼
-OpenRouter API
-      │
-      ▼
-LLM Model (GPT / Claude / etc.)
-      │
-      ▼
-Response back to Telegram
+## 🏗 Architecture
+
+```mermaid
+flowchart LR
+
+    subgraph Chat Layer
+        A[Telegram User]
+        B[Telegram Bot API]
+    end
+
+    subgraph Bot Layer
+        C[telegram_nanobot.py]
+    end
+
+    subgraph Intelligence Layer
+        D[OpenRouter API]
+        E[LLM Model]
+    end
+
+    A --> B
+    B --> C
+    C --> D
+    D --> E
+    E --> D
+    D --> C
+    C --> B
+    B --> A
+```
 🧠 How It Works
 
 User sends a message in Telegram
