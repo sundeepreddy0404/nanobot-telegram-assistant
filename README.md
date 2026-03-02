@@ -20,17 +20,21 @@ A minimal, production-ready Telegram bot that connects to LLM models using OpenR
 ## 🏗 Architecture
 
 
-User (Telegram)
-↓
-Telegram Bot API
-↓
-telegram_nanobot.py
-↓
-OpenRouter API
-↓
-LLM Model (GPT / Claude / etc.)
-↓
-Response back to Telegram
+## 🏗 Architecture
+
+The Nanobot Telegram Assistant follows a clean and lightweight AI agent flow.
+
+### 🔄 System Flow
+
+```mermaid
+flowchart LR
+    A[Telegram User] --> B[Telegram Bot API]
+    B --> C[telegram_nanobot.py]
+    C --> D[OpenRouter API]
+    D --> E[LLM Model (GPT / Claude / etc.)]
+    E --> C
+    C --> B
+    B --> A
 
 
 ---
