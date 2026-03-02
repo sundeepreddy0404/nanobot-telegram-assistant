@@ -31,3 +31,28 @@ It enables real-time AI conversations directly inside Telegram.
 ---
 
 ## 🏗 Architecture
+
+
+Telegram User
+↓
+Telegram Bot API
+↓
+Nanobot Agent
+↓
+OpenRouter (LLM)
+↓
+Response → Telegram
+
+
+---
+
+## 🛠 Installation
+
+```bash
+git clone https://github.com/YOUR_USERNAME/telegram-nanobot-ai.git
+cd telegram-nanobot-ai
+
+python3 -m venv venv
+source venv/bin/activate
+
+pip install -r requirements.txt
