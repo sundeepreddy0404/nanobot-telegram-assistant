@@ -11,21 +11,19 @@ flowchart LR
     E --> C
     C --> B
     B --> A
-🧠 How It Works
+```
 
-A user sends a message in Telegram
+---
 
-Telegram Bot API forwards the request to the bot
+### 🧠 How It Works
 
-telegram_nanobot.py processes and prepares the prompt
-
-The request is sent to OpenRouter
-
-OpenRouter routes it to the configured LLM model
-
-The model generates a response
-
-The response is returned to the user via Telegram
+1. User sends a message in Telegram  
+2. Telegram Bot API forwards the request  
+3. `telegram_nanobot.py` processes the input  
+4. Request is sent to OpenRouter  
+5. OpenRouter routes to the configured LLM  
+6. Model generates a response  
+7. Response is returned to the user
 
 🧩 Architecture Layers
 📱 Chat Layer
