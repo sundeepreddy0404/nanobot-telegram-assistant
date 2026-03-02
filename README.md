@@ -1,6 +1,4 @@
-The **Nanobot Telegram Assistant** follows a lightweight AI agent architecture designed for clarity, modularity, and extensibility.
-
----
+## 🏗 Architecture
 
 ### 🔄 System Flow
 
@@ -9,7 +7,7 @@ flowchart LR
     A[Telegram User] --> B[Telegram Bot API]
     B --> C[telegram_nanobot.py]
     C --> D[OpenRouter API]
-    D --> E[LLM Model (GPT / Claude / etc.)]
+    D --> E[LLM Model - GPT or Claude]
     E --> C
     C --> B
     B --> A
