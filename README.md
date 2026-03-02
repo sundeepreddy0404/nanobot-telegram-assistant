@@ -1,5 +1,19 @@
 # 🦊 nanobot-telegram-assistant
 
+### Ultra-Lightweight Telegram AI Assistant powered by Nanobot + OpenRouter
+
+![Python](https://img.shields.io/badge/python-3.10%2B-blue)
+![License](https://img.shields.io/badge/license-MIT-green)
+![OpenRouter](https://img.shields.io/badge/OpenRouter-LLM%20Gateway-purple)
+![Telegram Bot](https://img.shields.io/badge/Telegram-Bot-blue)
+![Status](https://img.shields.io/badge/status-Production%20Ready-brightgreen)
+
+---
+
+A minimal, production-ready Telegram bot that connects to modern LLM models (GPT / Claude / etc.) using OpenRouter and runs as a clean AI agent.
+
+---
+
 Ultra-lightweight Telegram AI Assistant powered by Nanobot + OpenRouter.
 
 A minimal, production-ready Telegram bot that connects to LLM models (GPT / Claude / etc.) using OpenRouter and runs as a clean AI agent.
