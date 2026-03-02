@@ -1,28 +1,6 @@
-# 🦊 nanobot-telegram-assistant
-
-Ultra-Lightweight Telegram AI Assistant powered by Nanobot + OpenRouter.
-
-A minimal, production-ready Telegram bot that connects to LLM models using OpenRouter and runs as a clean AI agent.
+The **Nanobot Telegram Assistant** follows a lightweight AI agent architecture designed for clarity, modularity, and extensibility.
 
 ---
-
-## ✨ Features
-
-- ⚡ Ultra-lightweight architecture
-- 🤖 AI-powered Telegram responses
-- 🔐 Secure environment variable setup
-- 🧠 OpenRouter LLM support
-- 🧩 Clean modular structure
-- 🚀 Easy deployment
-
----
-
-## 🏗 Architecture
-
-
-## 🏗 Architecture
-
-The Nanobot Telegram Assistant follows a clean and lightweight AI agent flow.
 
 ### 🔄 System Flow
 
@@ -35,28 +13,69 @@ flowchart LR
     E --> C
     C --> B
     B --> A
+🧠 How It Works
 
+A user sends a message in Telegram
 
----
+Telegram Bot API forwards the request to the bot
 
-## 📦 Project Structure
+telegram_nanobot.py processes and prepares the prompt
 
+The request is sent to OpenRouter
 
-nanobot-telegram-assistant/
-│
-├── telegram_nanobot.py # Main bot logic
-├── requirements.txt # Python dependencies
-├── .env.example # Environment variable template
-├── .gitignore # Ignored files
-└── README.md # Project documentation
+OpenRouter routes it to the configured LLM model
 
+The model generates a response
 
----
+The response is returned to the user via Telegram
 
-## 🔑 Setup Instructions
+🧩 Architecture Layers
+📱 Chat Layer
 
-### 1️⃣ Clone the Repository
+Telegram User Interface
 
-```bash
-git clone https://github.com/YOUR_USERNAME/nanobot-telegram-assistant.git
-cd nanobot-telegram-assistant
+Telegram Bot API
+
+🧠 Bot Layer
+
+telegram_nanobot.py
+
+Handles message parsing
+
+Sends prompts to OpenRouter
+
+Returns formatted responses
+
+🌐 AI Layer
+
+OpenRouter API
+
+Configured LLM model (GPT / Claude / etc.)
+
+🔁 Response Layer
+
+AI response sent back to Telegram user
+
+🚀 Design Principles
+
+⚡ Ultra-lightweight architecture
+
+🧩 Modular and extendable
+
+🔐 Secure environment variable configuration
+
+🔄 Model flexibility via OpenRouter
+
+🛠 Easy to extend with memory or tools
+
+🔮 Future Extensions
+
+Persistent conversation memory
+
+Tool integrations (search, APIs, automation)
+
+Multi-model routing
+
+Deployment containerization (Docker)
+
+Logging & monitoring layer
