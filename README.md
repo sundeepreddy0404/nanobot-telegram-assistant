@@ -1,77 +1,154 @@
-## 🏗 Architecture
+🦊 nanobot-telegram-assistant
 
-### 🔄 System Flow
+Ultra-lightweight Telegram AI Assistant powered by Nanobot + OpenRouter.
 
-```mermaid
-flowchart LR
-    A[Telegram User] --> B[Telegram Bot API]
-    B --> C[telegram_nanobot.py]
-    C --> D[OpenRouter API]
-    D --> E[LLM Model - GPT or Claude]
-    E --> C
-    C --> B
-    B --> A
-```
+A minimal, production-ready Telegram bot that connects to LLM models (GPT / Claude / etc.) using OpenRouter and runs as a clean AI agent.
 
----
+✨ Features
 
-### 🧠 How It Works
+⚡ Ultra-lightweight architecture
 
-1. User sends a message in Telegram  
-2. Telegram Bot API forwards the request  
-3. `telegram_nanobot.py` processes the input  
-4. Request is sent to OpenRouter  
-5. OpenRouter routes to the configured LLM  
-6. Model generates a response  
-7. Response is returned to the user
+🤖 AI-powered Telegram responses
+
+🔐 Secure environment variable setup
+
+🧠 OpenRouter LLM support
+
+🧩 Clean modular structure
+
+🚀 Easy deployment
+
+🏗 Architecture
+🔄 System Flow
+Telegram User
+      │
+      ▼
+Telegram Bot API
+      │
+      ▼
+telegram_nanobot.py (Bot Core)
+      │
+      ▼
+OpenRouter API
+      │
+      ▼
+LLM Model (GPT / Claude / etc.)
+      │
+      ▼
+Response back to Telegram
+🧠 How It Works
+
+User sends a message in Telegram
+
+Telegram Bot API forwards the request to the bot
+
+telegram_nanobot.py processes the message
+
+Request is sent to OpenRouter
+
+OpenRouter routes it to the configured LLM
+
+The model generates a response
+
+The response is sent back to the user
 
 🧩 Architecture Layers
-📱 Chat Layer
+🗨 Chat Layer
 
 Telegram User Interface
 
 Telegram Bot API
 
-🧠 Bot Layer
+⚙ Bot Layer
 
 telegram_nanobot.py
 
-Handles message parsing
+Message handling
 
-Sends prompts to OpenRouter
+Prompt processing
 
-Returns formatted responses
-
-🌐 AI Layer
+🤖 Intelligence Layer
 
 OpenRouter API
 
-Configured LLM model (GPT / Claude / etc.)
+GPT / Claude models
 
-🔁 Response Layer
+📦 Project Structure
+nanobot-telegram-assistant/
+│
+├── telegram_nanobot.py   # Main bot logic
+├── requirements.txt      # Python dependencies
+├── .env.example          # Environment variable template
+├── .gitignore            # Ignored files
+├── LICENSE               # MIT License
+└── README.md             # Project documentation
+🔑 Setup Instructions
+1️⃣ Clone the Repository
+git clone https://github.com/YOUR_USERNAME/nanobot-telegram-assistant.git
+cd nanobot-telegram-assistant
+2️⃣ Create Virtual Environment (Recommended)
+python3 -m venv venv
+source venv/bin/activate   # Mac/Linux
 
-AI response sent back to Telegram user
+Windows:
 
-🚀 Design Principles
+venv\Scripts\activate
+3️⃣ Install Dependencies
+pip install -r requirements.txt
+4️⃣ Configure Environment Variables
 
-⚡ Ultra-lightweight architecture
+Copy the example file:
 
-🧩 Modular and extendable
+cp .env.example .env
 
-🔐 Secure environment variable configuration
+Edit .env and add:
 
-🔄 Model flexibility via OpenRouter
+TELEGRAM_BOT_TOKEN=your_telegram_token_here
+OPENROUTER_API_KEY=your_openrouter_key_here
+MODEL=openai/gpt-4o-mini
 
-🛠 Easy to extend with memory or tools
+⚠ Never commit your real .env file.
 
-🔮 Future Extensions
+5️⃣ Run the Bot
+python telegram_nanobot.py
 
-Persistent conversation memory
+Your bot is now live 🚀
 
-Tool integrations (search, APIs, automation)
+🔒 Environment Variables
+Variable	Description
+TELEGRAM_BOT_TOKEN	Token from @BotFather
+OPENROUTER_API_KEY	API key from OpenRouter
+MODEL	LLM model name (GPT / Claude / etc.)
+🌍 Supported Models
 
-Multi-model routing
+Through OpenRouter, you can use:
 
-Deployment containerization (Docker)
+OpenAI GPT models
 
-Logging & monitoring layer
+Anthropic Claude
+
+Other supported LLM providers
+
+Just change the MODEL value in .env.
+
+🚀 Deployment Options
+
+You can deploy this bot on:
+
+VPS (DigitalOcean / AWS / etc.)
+
+Railway
+
+Render
+
+Docker container
+
+Local server
+
+📄 License
+
+This project is licensed under the MIT License.
+
+👨‍💻 Author
+
+Built with ❤️ by Sundeep Reddy
