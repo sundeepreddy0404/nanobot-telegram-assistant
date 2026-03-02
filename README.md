@@ -1,4 +1,4 @@
-🦊 nanobot-telegram-assistant
+# 🦊 nanobot-telegram-assistant
 
 Ultra-lightweight Telegram AI Assistant powered by Nanobot + OpenRouter.
 
